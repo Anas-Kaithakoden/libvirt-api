@@ -32,7 +32,7 @@ if domain.isActive() == 0: # shutdown
 elif domain.isActive() == 1: # running
     if sys.argv[1] == "stop":
         print(f"Stoping VM '{vm_name}'")
-        domain.destroy()
+        domain.shutdown()
     else:
         print(f"VM '{vm_name}' is already running")
 
